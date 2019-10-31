@@ -1,0 +1,39 @@
+[middleware]
+
+	;
+	; Whether or not the middleware is disabled
+	;
+
+	disabled = false
+
+	;
+	; The priority for the middleware
+	;
+
+	priority = 1
+
+	;
+	; The middleware class
+	;
+
+	class = Hiraeth\Middleware\HiddenMethods
+
+	;
+	; This middleware looks for a GET/POST parameter of a given name and converts the request
+	; method based on whether the value of that parameter is contained within a set of values.
+	;
+	; For example, if your parameter is "action" you can say "any time the action parameter is in
+	; the array `['update', 'edit']`, set the request method to `PUT`
+	;
+
+	param = action
+
+	;
+	; If the value of the above param is found within the values of this map, the method will
+	; be set to the key for those values.
+	;
+
+	map = {
+		"PUT": ["put", "update"],
+		"DELETE": ["delete", "remove"]
+	}
