@@ -1,5 +1,5 @@
 {
-    "name": "hiraeth/middleware",
+    "name": "hiraeth/middleware-common",
     "description": "Common middleware for the Hiraeth Nano Framework",
     "license": "MIT",
     "authors": [
