@@ -7,7 +7,7 @@ use Hiraeth;
 use Psr\Http\Server\MiddlewareInterface as Middleware;
 use Psr\Http\Server\RequestHandlerInterface as Handler;
 
-use Psr\Http\Message\RequestFactoryInterface as RequestFactory;
+use Psr\Http\Message\ServerRequestFactoryInterface as RequestFactory;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
@@ -30,11 +30,16 @@ class RefererAttribute implements Middleware
 	 */
 	public function process(Request $request, Handler $handler): Response
 	{
-		$request = $request->withAttribute(
-			'referer',
-			$this->factory->createRequest('GET', $request->getHeaderLine('Referer'))
-		);
+		$referer = $this->factory->createServerRequest('GET', $request->getHeaderLine('Referer'));
+		$query   = [];
 
-		return $handler->handle($request);
+		if ($referer->getUri()->getQuery()) {
+			parse_str($referer->getUri()->getQuery(), $query);
+		}
+
+		return $handler->handle($request->withAttribute(
+			'referer',
+			$referer->withQueryParams($query)
+		));
 	}
 }
