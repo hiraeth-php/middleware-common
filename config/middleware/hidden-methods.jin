@@ -26,7 +26,7 @@
 	; the array `['update', 'edit']`, set the request method to `PUT`
 	;
 
-	param = action
+	param = _action
 
 	;
 	; If the value of the above param is found within the values of this map, the method will

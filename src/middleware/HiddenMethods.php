@@ -30,7 +30,7 @@ class HiddenMethods implements Middleware
 	public function process(Request $request, Handler $handler): Response
 	{
 		$config = [
-			'param' => 'action',
+			'param' => '_action',
 			'map'   => [
 				'PUT'    => ['update'],
 				'DELETE' => ['remove']
