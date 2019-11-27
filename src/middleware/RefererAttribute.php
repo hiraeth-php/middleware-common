@@ -38,7 +38,7 @@ class RefererAttribute implements Middleware
 		}
 
 		return $handler->handle($request->withAttribute(
-			'referer',
+			'_referer',
 			$referer->withQueryParams($query)
 		));
 	}
