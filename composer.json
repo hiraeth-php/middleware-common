@@ -18,7 +18,7 @@
         "hiraeth/middleware-encrypt-cookies": "^1.0",
         "hiraeth/middleware-firewall": "^1.0",
         "hiraeth/middleware-expand-inputs": "^1.0",
-        "hiraeth/middleware-hidden-inputs": "^1.0",
+        "hiraeth/middleware-hidden-methods": "^1.0",
         "hiraeth/middleware-referer-attribute": "^1.0"
     },
     "require-dev": {
