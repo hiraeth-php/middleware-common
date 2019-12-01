@@ -26,13 +26,5 @@
         "phpunit/phpunit": "^8.4",
         "hiraeth/middleland": "^1.0",
         "hiraeth/diactoros": "^1.0"
-    },
-    "type": "opus-package",
-    "extra": {
-        "opus": {
-            "hiraeth/app": {
-                "config": ""
-            }
-        }
     }
 }
