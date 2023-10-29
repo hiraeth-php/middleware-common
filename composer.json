@@ -12,15 +12,15 @@
         }
     ],
     "require": {
-        "hiraeth/app": "^2.0",
-        "hiraeth/middleware-imp": "^2.0",
-        "hiraeth/middleware-client-ip": "^2.0",
-        "hiraeth/middleware-encrypt-cookies": "^2.0",
-        "hiraeth/middleware-referer-attribute": "^2.0"
+        "hiraeth/app": "^3.0",
+        "hiraeth/middleware-imp": "^3.0",
+        "hiraeth/middleware-client-ip": "^3.0",
+        "hiraeth/middleware-encrypt-cookies": "^3.0",
+        "hiraeth/middleware-referer-attribute": "^3.0"
     },
     "require-dev": {
-        "hiraeth/middleland": "^2.0",
-        "hiraeth/diactoros": "^2.0"
+        "hiraeth/harmony": "^3.0",
+        "hiraeth/diactoros": "^3.0"
     },
     "config": {
         "allow-plugins": {
